@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { LogoBrand } from "./logo-brand";
+import { Github } from "lucide-react";
 
 export function HeaderPrimary() {
   return (
@@ -17,12 +18,24 @@ export function HeaderPrimary() {
       {/* Logo ends here */}
 
       {/* Navigation starts here */}
-      <Link
-        href={"/"}
-        className="font-light hover:text-inspira-spark-highlight transition-colors"
-      >
-        Home
-      </Link>
+      <nav className="flex items-center gap-5">
+        <Link
+          href={"/"}
+          className="font-light hover:text-inspira-spark-highlight transition-colors"
+        >
+          Home
+        </Link>
+
+        <Link
+          href={"https://github.com/reginaldchand02/inspira"}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub Repository"
+          className="font-light hover:text-inspira-spark-highlight transition-colors"
+        >
+          <Github />
+        </Link>
+      </nav>
       {/* Navigation ends here */}
     </header>
   );
