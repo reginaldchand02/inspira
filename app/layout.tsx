@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     description:
       "A daily drop of original design inspiration, crafted by Reginald Sahil Chand. One new design every day, built to spark ideas and fuel creativity.",
 
-    url: "https://inspira.vercel.app/",
+    url: "https://inspira-design.vercel.app/",
     siteName: "Inspira",
     locale: "en_US",
     type: "website",
