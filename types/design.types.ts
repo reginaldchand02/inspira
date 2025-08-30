@@ -1,10 +1,14 @@
 export type Design = {
   id: number;
-  image_storage_bucket_url: string;
-  created_at: string;
   title: string;
-  author: string;
-  tags: string[];
-  short_description: string;
-  original_href?: string;
+  description: string;
+  media_storage_bucket_url: string;
+  category: string;
+  license: string;
+  creator: string;
+  created_at: string;
+  updated_at: string;
+  ai_prompt?: string;
+  tags?: string[];
+  href?: string;
 };

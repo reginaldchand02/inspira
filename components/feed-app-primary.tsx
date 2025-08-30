@@ -2,14 +2,12 @@
 
 import {
   Card,
-  CardAction,
   CardContent,
   CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-
 import Image from "next/image";
 import { Badge } from "./ui/badge";
 import { Section } from "./section";
@@ -18,7 +16,7 @@ import { Design } from "@/types/design.types";
 import { getDesigns } from "@/utils/supabase/get-designs";
 import { Button } from "./ui/button";
 import Link from "next/link";
-import { SkeletonFeedAppPrimary } from "./ui/skeletion-feed-app-primary";
+import { SkeletonFeedAppPrimary } from "./skeletion-feed-app-primary";
 import { ErrorState } from "./error-state";
 
 export function FeedAppPrimary() {
@@ -32,6 +30,7 @@ export function FeedAppPrimary() {
         const data = await getDesigns();
         setDesigns(data);
       } catch (err) {
+        console.error("Error fetching designs:", err);
         setDesigns([]);
       }
     };
@@ -58,53 +57,92 @@ export function FeedAppPrimary() {
       {designDataFetchingTimeout ? (
         <ErrorState />
       ) : (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
+        <div className="columns-1 sm:columns-2 lg:columns-3 gap-5 space-y-5">
           {isLoading ? (
             <SkeletonFeedAppPrimary />
           ) : (
             designs.map((design) => (
-              <Card key={design.id} className="pt-0">
+              <Card
+                key={design.id}
+                className="pt-0 overflow-hidden shadow-md transition hover:shadow-xl break-inside-avoid"
+              >
                 <CardContent className="p-0">
                   <Image
-                    src={design.image_storage_bucket_url}
+                    src={design.media_storage_bucket_url}
                     alt={design.title}
                     width={800}
                     height={450}
                     sizes="100vw"
-                    className="rounded-t-xl object-cover w-full h-auto"
+                    priority={
+                      designs.length > 0 ? designs[0].id === design.id : false
+                    }
+                    className="rounded-t-2xl object-cover w-full h-auto"
                   />
                 </CardContent>
 
-                <CardHeader>
-                  <CardTitle>{design.title}</CardTitle>
-                  <CardDescription>{design.short_description}</CardDescription>
-                </CardHeader>
+                <CardHeader className="space-y-2">
+                  <CardTitle className="line-clamp-1">{design.title}</CardTitle>
 
-                <CardFooter className="flex flex-col items-start gap-2 w-full">
-                  <div className="flex flex-wrap gap-2 w-full">
-                    {design.tags.map((tag, i) => (
-                      <Badge key={i} variant="secondary">
-                        {tag}
-                      </Badge>
-                    ))}
-                  </div>
-
-                  {design.original_href && (
-                    <CardAction>
-                      <Button asChild variant="link" className="p-0" size="sm">
-                        <Link
-                          href={design.original_href}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          View Original
-                        </Link>
-                      </Button>
-                    </CardAction>
+                  {design.description && (
+                    <CardDescription className="line-clamp-2">
+                      {design.description}
+                    </CardDescription>
                   )}
 
-                  <div className="text-sm text-muted-foreground w-full text-right">
-                    - {design.author}
+                  <div className="flex flex-wrap items-center gap-3 text-xs text-muted-foreground">
+                    <span className="px-2 py-1 rounded-md bg-white/10">
+                      {design.category}
+                    </span>
+
+                    <span className="px-2 py-1 rounded-md bg-white/10">
+                      {design.license}
+                    </span>
+                  </div>
+                </CardHeader>
+
+                <CardFooter className="flex flex-col items-start gap-3 w-full">
+                  {design.tags && design.tags.length > 0 && (
+                    <div className="flex flex-wrap gap-2">
+                      {design.tags.map((tag, i) => (
+                        <Badge key={i} variant="secondary">
+                          {tag}
+                        </Badge>
+                      ))}
+                    </div>
+                  )}
+
+                  {design.ai_prompt && (
+                    <blockquote className="text-xs italic text-muted-foreground">
+                      “{design.ai_prompt}”
+                    </blockquote>
+                  )}
+
+                  {design.href && (
+                    <Button asChild variant="link" className="p-0" size="sm">
+                      <Link
+                        href={design.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        View Original
+                      </Link>
+                    </Button>
+                  )}
+
+                  <div className="flex justify-between w-full text-xs text-muted-foreground">
+                    <span>{design.creator}</span>
+
+                    <span>
+                      {design.updated_at
+                        ? `Updated: ${new Date(
+                            design.updated_at
+                          ).toLocaleDateString()}`
+                        : design.created_at
+                        ? `Created: ${new Date(
+                            design.created_at
+                          ).toLocaleDateString()}`
+                        : null}
+                    </span>
                   </div>
                 </CardFooter>
               </Card>

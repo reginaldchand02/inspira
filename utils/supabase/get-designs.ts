@@ -7,18 +7,23 @@ export async function getDesigns(): Promise<Design[]> {
     .select(
       `
         id,
-        image_storage_bucket_url,
-        created_at,
         title,
-        author,
+        description,
+        media_storage_bucket_url,
+        category,
+        license,
+        creator,
+        created_at,
+        updated_at,
+        ai_prompt,
         tags,
-        short_description,
-        original_href
+        href
       `
     )
     .order("created_at", { ascending: false });
 
   if (error) {
+    console.error("Error fetching designs:", error);
     return [];
   }
 
