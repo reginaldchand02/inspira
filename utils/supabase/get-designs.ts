@@ -1,4 +1,4 @@
-import { Design } from "@/types/design-inspiration.types";
+import { Design } from "@/types/design.types";
 import { supabase } from "./server";
 
 export async function getDesigns(): Promise<Design[]> {

@@ -14,7 +14,7 @@ import Image from "next/image";
 import { Badge } from "./ui/badge";
 import { Section } from "./section";
 import { useEffect, useState } from "react";
-import { Design } from "@/types/design-inspiration.types";
+import { Design } from "@/types/design.types";
 import { getDesigns } from "@/utils/supabase/get-designs";
 import { Button } from "./ui/button";
 import Link from "next/link";
