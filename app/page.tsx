@@ -1,6 +1,7 @@
 "use client";
 
 import { FeedAppPrimary } from "@/components/feed-app-primary";
+import { HeroSection } from "@/components/hero-section";
 import { Loader } from "@/components/loader";
 import { Suspense, useEffect, useState } from "react";
 
@@ -17,7 +18,14 @@ export default function Home() {
 
   return (
     <Suspense fallback={<Loader />}>
-      {loading ? <Loader /> : <FeedAppPrimary />}
+      {loading ? (
+        <Loader />
+      ) : (
+        <>
+          <HeroSection />
+          <FeedAppPrimary />
+        </>
+      )}
     </Suspense>
   );
 }
