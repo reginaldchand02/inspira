@@ -4,8 +4,7 @@ import { Github } from "lucide-react";
 
 export function HeaderPrimary() {
   return (
-    <header className="max-w-7xl w-[90%] sm:w-[70%] md:w-1/2 mx-auto h-16 p-5 pl-2 fixed inset-0 top-5 flex items-center justify-between backdrop-blur-md bg-background/40 rounded-full z-50">
-      {/* Logo starts here */}
+    <header className="max-w-7xl w-[90%] sm:w-[70%] md:w-1/2 mx-auto h-16 p-5 pl-2 sticky inset-0 top-5 mb-16 flex items-center justify-between backdrop-blur-md bg-background/40 rounded-full z-50">
       <Link href={"/"} className="flex items-center gap-2.5 group">
         <div className="w-12 h-12">
           <LogoBrand />
@@ -15,9 +14,7 @@ export function HeaderPrimary() {
           Inspira
         </span>
       </Link>
-      {/* Logo ends here */}
 
-      {/* Navigation starts here */}
       <nav className="flex items-center gap-5">
         <Link
           href={"/"}
@@ -36,7 +33,6 @@ export function HeaderPrimary() {
           <Github />
         </Link>
       </nav>
-      {/* Navigation ends here */}
     </header>
   );
 }
