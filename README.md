@@ -51,7 +51,7 @@ The logo is minimal, transparent, and scalable, making it suitable for both bran
 ### v2 | Enhanced Features
 
 - Clerk authentication (user accounts)
-- Favorites (save and revisit designs)
+- Simple comments system (users enter name + comment, no accounts)
 - Planned support for light/dark theme switching
 
 ### v3 | Fully Featured Landing Page
@@ -65,6 +65,8 @@ The logo is minimal, transparent, and scalable, making it suitable for both bran
 
 - Design filtering and categorization (by tags, style, or theme)
 - Smarter browsing experience for users
+- Share designs externally (socials, copy link)
+- Blog section with posts on process, inspiration, and updates
 
 ### v5 | Iteration & Expansion
 
