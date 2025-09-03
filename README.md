@@ -50,7 +50,6 @@ The logo is minimal, transparent, and scalable, making it suitable for both bran
 
 ### v2 | Enhanced Features
 
-- Clerk authentication (user accounts)
 - Simple comments system (users enter name + comment, no accounts)
 - Planned support for light/dark theme switching
 
