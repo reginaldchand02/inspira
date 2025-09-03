@@ -42,10 +42,6 @@ The logo is minimal, transparent, and scalable, making it suitable for both bran
 
 ## Versioning & Roadmap
 
-### v2 | Enhanced Features
-
-- Simple comments system (users enter username (unique) + comment, no accounts)
-
 ### v3 | Fully Featured Landing Page
 
 - Public-facing landing page with polished design
