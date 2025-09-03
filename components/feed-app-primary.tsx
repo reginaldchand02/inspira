@@ -84,9 +84,7 @@ export function FeedAppPrimary() {
                   <CardTitle className="line-clamp-1">{design.title}</CardTitle>
 
                   {design.description && (
-                    <CardDescription className="line-clamp-2">
-                      {design.description}
-                    </CardDescription>
+                    <CardDescription>{design.description}</CardDescription>
                   )}
 
                   <div className="flex flex-wrap items-center gap-3 text-xs text-muted-foreground">
