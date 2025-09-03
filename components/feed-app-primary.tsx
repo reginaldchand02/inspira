@@ -64,7 +64,7 @@ export function FeedAppPrimary() {
             designs.map((design) => (
               <Card
                 key={design.id}
-                className="pt-0 overflow-hidden shadow-md transition hover:shadow-xl break-inside-avoid"
+                className="pt-0 overflow-hidden shadow-md transition break-inside-avoid"
               >
                 <CardContent className="p-0">
                   <Image
