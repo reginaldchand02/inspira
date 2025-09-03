@@ -42,16 +42,10 @@ The logo is minimal, transparent, and scalable, making it suitable for both bran
 
 ## Versioning & Roadmap
 
-### v1 | Core Release
-
-- Basic header and navigation
-- Brief introduction to Inspira
-- Grid of daily designs (one new design each day, manually curated)
-
 ### v2 | Enhanced Features
 
-- Simple comments system (users enter name + comment, no accounts)
 - Planned support for light/dark theme switching
+- Simple comments system (users enter name + comment, no accounts)
 
 ### v3 | Fully Featured Landing Page
 
