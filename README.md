@@ -44,8 +44,7 @@ The logo is minimal, transparent, and scalable, making it suitable for both bran
 
 ### v2 | Enhanced Features
 
-- Planned support for light/dark theme switching
-- Simple comments system (users enter name + comment, no accounts)
+- Simple comments system (users enter username (unique) + comment, no accounts)
 
 ### v3 | Fully Featured Landing Page
 
