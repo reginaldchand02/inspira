@@ -1,3 +1,5 @@
+"use client";
+
 import { AspectRatio } from "./ui/aspect-ratio";
 import {
   Card,

@@ -1,3 +1,5 @@
+"use client";
+
 export function Section({ children }: { children: React.ReactNode }) {
   return (
     <section className="max-w-7xl w-full mx-auto mt-16 px-5 md:px-10 lg:px-15">

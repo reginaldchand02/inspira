@@ -1,3 +1,5 @@
+"use client";
+
 import { InspiraFeed } from "@/components/inspira-feed";
 import { InspiraFeedHero } from "@/components/inspira-feed-hero";
 
