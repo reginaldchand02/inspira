@@ -15,10 +15,10 @@ export function AboutSection() {
         <div className="space-y-4 max-w-3xl mx-auto">
           <TypographyH2>About Inspira</TypographyH2>
           <TypographyP>
-            Inspira isn't just a feed, it's a daily ritual of design. Every
-            original creation is curated and crafted by Reginald Sahil Chand,
-            delivering a fresh spark of inspiration to fuel your ideas and
-            creativity.
+            Inspira isn&apos;t just a feed, it&apos;s a daily ritual of design.
+            Every original creation is curated and crafted by Reginald Sahil
+            Chand, delivering a fresh spark of inspiration to fuel your ideas
+            and creativity.
           </TypographyP>
         </div>
 
@@ -73,7 +73,7 @@ export function AboutSection() {
         </div>
 
         <Button asChild>
-          <Link href="/inspira">See Today's Drop</Link>
+          <Link href="/inspira">See Today&apos;s Drop</Link>
         </Button>
       </div>
     </Section>
