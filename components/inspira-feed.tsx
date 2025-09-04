@@ -19,7 +19,7 @@ import Link from "next/link";
 import { SkeletonFeedAppPrimary } from "./skeletion-feed-app-primary";
 import { ErrorState } from "./error-state";
 
-export function FeedAppPrimary() {
+export function InspiraFeed() {
   const [designs, setDesigns] = useState<Design[] | null>(null);
   const [designDataFetchingTimeout, setDesignDataFetchingTimeout] =
     useState(false);

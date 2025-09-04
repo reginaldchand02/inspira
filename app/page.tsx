@@ -1,6 +1,5 @@
 "use client";
 
-import { FeedAppPrimary } from "@/components/feed-app-primary";
 import { HeroSection } from "@/components/hero-section";
 import { Loader } from "@/components/loader";
 import { Suspense, useEffect, useState } from "react";
@@ -23,7 +22,6 @@ export default function Home() {
       ) : (
         <>
           <HeroSection />
-          <FeedAppPrimary />
         </>
       )}
     </Suspense>
