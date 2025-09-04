@@ -1,5 +1,6 @@
 "use client";
 
+import { AboutSection } from "@/components/about-section";
 import { HeroSection } from "@/components/hero-section";
 import { Loader } from "@/components/loader";
 import { PreviewSection } from "@/components/preview-section";
@@ -24,6 +25,7 @@ export default function Home() {
         <>
           <HeroSection />
           <PreviewSection />
+          <AboutSection />
         </>
       )}
     </Suspense>
