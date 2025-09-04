@@ -2,6 +2,7 @@
 
 import { HeroSection } from "@/components/hero-section";
 import { Loader } from "@/components/loader";
+import { PreviewSection } from "@/components/preview-section";
 import { Suspense, useEffect, useState } from "react";
 
 export default function Home() {
@@ -22,6 +23,7 @@ export default function Home() {
       ) : (
         <>
           <HeroSection />
+          <PreviewSection />
         </>
       )}
     </Suspense>
