@@ -1,0 +1,55 @@
+"use client";
+
+import { Section } from "./section";
+import { TypographyH2 } from "./typography-h2";
+import { Card, CardHeader, CardTitle, CardContent } from "./ui/card";
+import { Palette, Users } from "lucide-react";
+
+export function MissionVisionSection() {
+  return (
+    <Section>
+      <div className="mx-auto max-w-5xl space-y-10 text-center">
+        <TypographyH2>Mission & Vision</TypographyH2>
+
+        <div className="grid gap-6 sm:grid-cols-2 text-left">
+          <Card>
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <Palette className="w-5 h-5 text-primary" />
+                Mission
+              </CardTitle>
+            </CardHeader>
+
+            <CardContent>
+              <p className="text-sm text-muted-foreground">
+                Inspira began as a way to stay motivated as a designer and share
+                that spark with fellow creatives. It also acts as my personal
+                design portfolio, not in the traditional sense, but as a living
+                stream of work where I&apos;m the sole publisher. Every drop
+                reflects both practice and passion.
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <Users className="w-5 h-5 text-primary" />
+                Vision
+              </CardTitle>
+            </CardHeader>
+
+            <CardContent>
+              <p className="text-sm text-muted-foreground">
+                To grow Inspira into a trusted source of daily creativity,
+                inspiring designers everywhere, while showcasing the harmony
+                between design, development, and AI-driven imagination. The goal
+                is simple: make inspiration a habit, not a hunt.
+              </p>
+            </CardContent>
+          </Card>
+        </div>
+      </div>
+    </Section>
+  );
+}
