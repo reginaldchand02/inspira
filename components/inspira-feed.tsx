@@ -83,7 +83,9 @@ export function InspiraFeed() {
                   <div className="absolute top-2 right-2">
                     <Button asChild variant="outline">
                       <Link
-                        href={design.media_storage_bucket_url}
+                        href={`/api/download?file=${encodeURIComponent(
+                          design.media_storage_bucket_url
+                        )}`}
                         download
                         aria-label={`Download ${design.title}`}
                         target="_blank"
@@ -160,7 +162,9 @@ export function InspiraFeed() {
 
                   <Button asChild size="sm" className="mt-2">
                     <Link
-                      href={design.media_storage_bucket_url}
+                      href={`/api/download?file=${encodeURIComponent(
+                        design.media_storage_bucket_url
+                      )}`}
                       download
                       target="_blank"
                       rel="noopener noreferrer"
