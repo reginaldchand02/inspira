@@ -81,11 +81,9 @@ export function BenefitsSection() {
           </Card>
         </div>
 
-        <div className="pt-6">
-          <Button asChild>
-            <Link href="/inspira">Start Exploring</Link>
-          </Button>
-        </div>
+        <Button asChild>
+          <Link href="/inspira">Start Exploring</Link>
+        </Button>
       </div>
     </Section>
   );
