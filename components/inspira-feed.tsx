@@ -18,6 +18,7 @@ import { Button } from "./ui/button";
 import Link from "next/link";
 import { SkeletonFeedAppPrimary } from "./skeletion-feed-app-primary";
 import { ErrorState } from "./error-state";
+import { Download } from "lucide-react";
 
 export function InspiraFeed() {
   const [designs, setDesigns] = useState<Design[] | null>(null);
@@ -66,7 +67,7 @@ export function InspiraFeed() {
                 key={design.id}
                 className="pt-0 overflow-hidden shadow-md transition break-inside-avoid"
               >
-                <CardContent className="p-0">
+                <CardContent className="p-0 relative">
                   <Image
                     src={design.media_storage_bucket_url}
                     alt={design.title}
@@ -78,6 +79,20 @@ export function InspiraFeed() {
                     }
                     className="rounded-t-2xl object-cover w-full h-auto"
                   />
+
+                  <div className="absolute top-2 right-2">
+                    <Button asChild variant="outline">
+                      <Link
+                        href={design.media_storage_bucket_url}
+                        download
+                        aria-label={`Download ${design.title}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Download className="w-5 h-5 text-primary" />
+                      </Link>
+                    </Button>
+                  </div>
                 </CardContent>
 
                 <CardHeader className="space-y-2">
@@ -142,6 +157,17 @@ export function InspiraFeed() {
                         : null}
                     </span>
                   </div>
+
+                  <Button asChild size="sm" className="mt-2">
+                    <Link
+                      href={design.media_storage_bucket_url}
+                      download
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Download
+                    </Link>
+                  </Button>
                 </CardFooter>
               </Card>
             ))
