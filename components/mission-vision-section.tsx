@@ -1,6 +1,7 @@
 "use client";
 
 import { Section } from "./section";
+import { SectionChild } from "./section-child";
 import { TypographyH2 } from "./typography-h2";
 import { TypographySmall } from "./typography-small";
 import { Card, CardHeader, CardTitle, CardContent } from "./ui/card";
@@ -9,7 +10,7 @@ import { Palette, Users } from "lucide-react";
 export function MissionVisionSection() {
   return (
     <Section>
-      <div className="mx-auto max-w-5xl space-y-10 text-center">
+      <SectionChild>
         <TypographyH2>Mission & Vision</TypographyH2>
 
         <div className="grid gap-6 sm:grid-cols-2 text-left">
@@ -50,7 +51,7 @@ export function MissionVisionSection() {
             </CardContent>
           </Card>
         </div>
-      </div>
+      </SectionChild>
     </Section>
   );
 }

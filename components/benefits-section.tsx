@@ -7,11 +7,12 @@ import Link from "next/link";
 import { Download, Sparkles, Wand2, FileText } from "lucide-react";
 import { TypographyH2 } from "./typography-h2";
 import { TypographySmall } from "./typography-small";
+import { SectionChild } from "./section-child";
 
 export function BenefitsSection() {
   return (
     <Section>
-      <div className="mx-auto max-w-5xl space-y-10 text-center">
+      <SectionChild>
         <TypographyH2>Benefits</TypographyH2>
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-2 text-left">
@@ -85,7 +86,7 @@ export function BenefitsSection() {
         <Button asChild>
           <Link href="/inspira">Start Exploring</Link>
         </Button>
-      </div>
+      </SectionChild>
     </Section>
   );
 }

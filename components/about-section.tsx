@@ -8,11 +8,12 @@ import { Palette, Code2, Sparkles } from "lucide-react";
 import { TypographyH2 } from "./typography-h2";
 import { TypographyP } from "./typography-p";
 import { TypographySmall } from "./typography-small";
+import { SectionChild } from "./section-child";
 
 export function AboutSection() {
   return (
     <Section>
-      <div className="mx-auto max-w-5xl space-y-10 text-center">
+      <SectionChild>
         <div className="space-y-4 max-w-3xl mx-auto">
           <TypographyH2>About Inspira</TypographyH2>
           <TypographyP>
@@ -76,7 +77,7 @@ export function AboutSection() {
         <Button asChild>
           <Link href="/inspira">See Today&apos;s Drop</Link>
         </Button>
-      </div>
+      </SectionChild>
     </Section>
   );
 }
