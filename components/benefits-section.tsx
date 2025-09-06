@@ -6,6 +6,7 @@ import { Button } from "./ui/button";
 import Link from "next/link";
 import { Download, Sparkles, Wand2, FileText } from "lucide-react";
 import { TypographyH2 } from "./typography-h2";
+import { TypographySmall } from "./typography-small";
 
 export function BenefitsSection() {
   return (
@@ -23,11 +24,11 @@ export function BenefitsSection() {
             </CardHeader>
 
             <CardContent>
-              <p className="text-sm text-muted-foreground">
+              <TypographySmall>
                 Every design can be downloaded, not just viewed. You&apos;ll
                 always have access to the final polished file, ready to use in
                 your projects.
-              </p>
+              </TypographySmall>
             </CardContent>
           </Card>
 
@@ -40,10 +41,10 @@ export function BenefitsSection() {
             </CardHeader>
 
             <CardContent>
-              <p className="text-sm text-muted-foreground">
+              <TypographySmall>
                 Each drop comes with its original AI prompt. Feed it into your
                 own AI workflow to experiment, remix, or spark something new.
-              </p>
+              </TypographySmall>
             </CardContent>
           </Card>
 
@@ -56,11 +57,11 @@ export function BenefitsSection() {
             </CardHeader>
 
             <CardContent>
-              <p className="text-sm text-muted-foreground">
+              <TypographySmall>
                 Pure AI-generated imagery like wallpapers can be downloaded and
                 used directly. Mixed or custom-refined designs are delivered as
                 finished files, more than just raw AI output.
-              </p>
+              </TypographySmall>
             </CardContent>
           </Card>
 
@@ -73,10 +74,10 @@ export function BenefitsSection() {
             </CardHeader>
 
             <CardContent>
-              <p className="text-sm text-muted-foreground">
+              <TypographySmall>
                 Inspira generates insightful AI blogs and fully automated weekly
                 emails, no human intervention. Stay inspired effortlessly.
-              </p>
+              </TypographySmall>
             </CardContent>
           </Card>
         </div>

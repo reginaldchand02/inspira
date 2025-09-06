@@ -2,6 +2,7 @@
 
 import { Section } from "./section";
 import { TypographyH2 } from "./typography-h2";
+import { TypographySmall } from "./typography-small";
 import { Card, CardHeader, CardTitle, CardContent } from "./ui/card";
 import {
   Sparkles,
@@ -27,11 +28,11 @@ export function FeaturesSection() {
             </CardHeader>
 
             <CardContent>
-              <p className="text-sm text-muted-foreground">
+              <TypographySmall>
                 Every single day, Inspira delivers a brand-new original design,
                 a consistent ritual of fresh inspiration to fuel your creative
                 process.
-              </p>
+              </TypographySmall>
             </CardContent>
           </Card>
 
@@ -44,10 +45,10 @@ export function FeaturesSection() {
             </CardHeader>
 
             <CardContent>
-              <p className="text-sm text-muted-foreground">
+              <TypographySmall>
                 Each design includes its AI prompt, letting you learn, remix, or
                 spark new ideas straight from the source.
-              </p>
+              </TypographySmall>
             </CardContent>
           </Card>
 
@@ -60,10 +61,10 @@ export function FeaturesSection() {
             </CardHeader>
 
             <CardContent>
-              <p className="text-sm text-muted-foreground">
+              <TypographySmall>
                 No design is ever deleted. Past drops stay open, browsable, and
                 part of the growing library of inspiration.
-              </p>
+              </TypographySmall>
             </CardContent>
           </Card>
 
@@ -76,10 +77,10 @@ export function FeaturesSection() {
             </CardHeader>
 
             <CardContent>
-              <p className="text-sm text-muted-foreground">
+              <TypographySmall>
                 Inspira is built in public. The entire codebase is open-source,
                 free to explore, contribute to, or fork.
-              </p>
+              </TypographySmall>
             </CardContent>
           </Card>
 
@@ -92,10 +93,10 @@ export function FeaturesSection() {
             </CardHeader>
 
             <CardContent>
-              <p className="text-sm text-muted-foreground">
+              <TypographySmall>
                 Next.js, Tailwind, shadcn/ui, Supabase, and Cloudflare R2,
                 lightweight, scalable, and future-ready.
-              </p>
+              </TypographySmall>
             </CardContent>
           </Card>
 
@@ -108,10 +109,10 @@ export function FeaturesSection() {
             </CardHeader>
 
             <CardContent>
-              <p className="text-sm text-muted-foreground">
+              <TypographySmall>
                 Inspira is designed for every screen. Mobile app support is on
                 the horizon for an even smoother experience.
-              </p>
+              </TypographySmall>
             </CardContent>
           </Card>
         </div>

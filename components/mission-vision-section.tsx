@@ -2,6 +2,7 @@
 
 import { Section } from "./section";
 import { TypographyH2 } from "./typography-h2";
+import { TypographySmall } from "./typography-small";
 import { Card, CardHeader, CardTitle, CardContent } from "./ui/card";
 import { Palette, Users } from "lucide-react";
 
@@ -21,13 +22,13 @@ export function MissionVisionSection() {
             </CardHeader>
 
             <CardContent>
-              <p className="text-sm text-muted-foreground">
+              <TypographySmall>
                 Inspira began as a way to stay motivated as a designer and share
                 that spark with fellow creatives. It also acts as my personal
                 design portfolio, not in the traditional sense, but as a living
                 stream of work where I&apos;m the sole publisher. Every drop
                 reflects both practice and passion.
-              </p>
+              </TypographySmall>
             </CardContent>
           </Card>
 
@@ -40,12 +41,12 @@ export function MissionVisionSection() {
             </CardHeader>
 
             <CardContent>
-              <p className="text-sm text-muted-foreground">
+              <TypographySmall>
                 To grow Inspira into a trusted source of daily creativity,
                 inspiring designers everywhere, while showcasing the harmony
                 between design, development, and AI-driven imagination. The goal
                 is simple: make inspiration a habit, not a hunt.
-              </p>
+              </TypographySmall>
             </CardContent>
           </Card>
         </div>

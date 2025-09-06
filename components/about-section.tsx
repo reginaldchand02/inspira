@@ -7,6 +7,7 @@ import Link from "next/link";
 import { Palette, Code2, Sparkles } from "lucide-react";
 import { TypographyH2 } from "./typography-h2";
 import { TypographyP } from "./typography-p";
+import { TypographySmall } from "./typography-small";
 
 export function AboutSection() {
   return (
@@ -32,10 +33,10 @@ export function AboutSection() {
             </CardHeader>
 
             <CardContent>
-              <p className="text-sm text-muted-foreground">
+              <TypographySmall>
                 A showcase of creativity and craft, presented as a daily ritual
                 of fresh inspiration.
-              </p>
+              </TypographySmall>
             </CardContent>
           </Card>
 
@@ -48,10 +49,10 @@ export function AboutSection() {
             </CardHeader>
 
             <CardContent>
-              <p className="text-sm text-muted-foreground">
+              <TypographySmall>
                 A reliable platform built to deliver design consistently,
                 simple, focused, and fast.
-              </p>
+              </TypographySmall>
             </CardContent>
           </Card>
 
@@ -64,10 +65,10 @@ export function AboutSection() {
             </CardHeader>
 
             <CardContent>
-              <p className="text-sm text-muted-foreground">
+              <TypographySmall>
                 A creative partner in the process, blending imagination with
                 AI-driven idea generation and refinement.
-              </p>
+              </TypographySmall>
             </CardContent>
           </Card>
         </div>
