@@ -1,8 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { LogoBrand } from "./logo-brand";
 import { Github } from "lucide-react";
+import { LogoBrand } from "./logo-brand";
 
 export function HeaderPrimary() {
   return (

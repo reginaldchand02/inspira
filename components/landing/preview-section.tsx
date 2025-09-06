@@ -1,6 +1,6 @@
 "use client";
 
-import { Section } from "./section";
+import { Section } from "../global/section";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import Image from "next/image";
 

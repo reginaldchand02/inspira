@@ -1,13 +1,13 @@
 "use client";
 
-import { Section } from "./section";
-import { Card, CardHeader, CardTitle, CardContent } from "./ui/card";
-import { Button } from "./ui/button";
+import { Section } from "../global/section";
+import { Card, CardHeader, CardTitle, CardContent } from "../ui/card";
+import { Button } from "../ui/button";
 import Link from "next/link";
 import { Download, Sparkles, Wand2, FileText } from "lucide-react";
-import { TypographyH2 } from "./typography-h2";
-import { TypographySmall } from "./typography-small";
-import { SectionChild } from "./section-child";
+import { TypographyH2 } from "../typography/typography-h2";
+import { TypographySmall } from "../typography/typography-small";
+import { SectionChild } from "../global/section-child";
 
 export function BenefitsSection() {
   return (

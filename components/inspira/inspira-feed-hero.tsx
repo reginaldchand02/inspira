@@ -1,8 +1,8 @@
 "use client";
 
-import { Section } from "./section";
-import { TypographyH1 } from "./typography-h1";
-import { TypographyLead } from "./typography-lead";
+import { Section } from "../global/section";
+import { TypographyH1 } from "../typography/typography-h1";
+import { TypographyLead } from "../typography/typography-lead";
 
 export function InspiraFeedHero() {
   return (

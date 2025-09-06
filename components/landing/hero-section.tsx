@@ -1,10 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import { Section } from "./section";
-import { TypographyH1 } from "./typography-h1";
-import { TypographyLead } from "./typography-lead";
-import { Button } from "./ui/button";
+import { Section } from "../global/section";
+import { TypographyH1 } from "../typography/typography-h1";
+import { TypographyLead } from "../typography/typography-lead";
+import { Button } from "../ui/button";
 
 export function HeroSection() {
   return (

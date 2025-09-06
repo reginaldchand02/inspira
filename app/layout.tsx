@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
-import { HeaderPrimary } from "@/components/header-primary";
-import { FooterPrimary } from "@/components/footer-primary";
+import { HeaderPrimary } from "@/components/global/header-primary";
+import { FooterPrimary } from "@/components/global/footer-primary";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

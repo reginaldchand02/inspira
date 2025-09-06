@@ -1,6 +1,6 @@
 "use client";
 
-import { AspectRatio } from "./ui/aspect-ratio";
+import { AspectRatio } from "../ui/aspect-ratio";
 import {
   Card,
   CardContent,
@@ -8,10 +8,10 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "./ui/card";
-import { Skeleton } from "./ui/skeleton";
+} from "../ui/card";
+import { Skeleton } from "../ui/skeleton";
 
-export function SkeletonFeedAppPrimary() {
+export function SkeletonInspiraFeed() {
   return (
     <>
       {Array.from({ length: 6 }).map((_, i) => (

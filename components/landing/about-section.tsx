@@ -1,14 +1,14 @@
 "use client";
 
-import { Section } from "./section";
-import { Button } from "./ui/button";
-import { Card, CardHeader, CardTitle, CardContent } from "./ui/card";
+import { Section } from "../global/section";
+import { Button } from "../ui/button";
+import { Card, CardHeader, CardTitle, CardContent } from "../ui/card";
 import Link from "next/link";
 import { Palette, Code2, Sparkles } from "lucide-react";
-import { TypographyH2 } from "./typography-h2";
-import { TypographyP } from "./typography-p";
-import { TypographySmall } from "./typography-small";
-import { SectionChild } from "./section-child";
+import { TypographyH2 } from "../typography/typography-h2";
+import { TypographyP } from "../typography/typography-p";
+import { TypographySmall } from "../typography/typography-small";
+import { SectionChild } from "../global/section-child";
 
 export function AboutSection() {
   return (

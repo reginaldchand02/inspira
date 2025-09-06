@@ -1,10 +1,10 @@
 "use client";
 
-import { Section } from "./section";
-import { SectionChild } from "./section-child";
-import { TypographyH2 } from "./typography-h2";
-import { TypographySmall } from "./typography-small";
-import { Card, CardHeader, CardTitle, CardContent } from "./ui/card";
+import { Section } from "../global/section";
+import { SectionChild } from "../global/section-child";
+import { TypographyH2 } from "../typography/typography-h2";
+import { TypographySmall } from "../typography/typography-small";
+import { Card, CardHeader, CardTitle, CardContent } from "../ui/card";
 import { Palette, Users } from "lucide-react";
 
 export function MissionVisionSection() {

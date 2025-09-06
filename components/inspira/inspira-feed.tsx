@@ -9,16 +9,16 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import Image from "next/image";
-import { Badge } from "./ui/badge";
-import { Section } from "./section";
+import { Badge } from "../ui/badge";
+import { Section } from "../global/section";
 import { useEffect, useState } from "react";
 import { Design } from "@/types/design.types";
 import { getDesigns } from "@/utils/supabase/get-designs";
-import { Button } from "./ui/button";
+import { Button } from "../ui/button";
 import Link from "next/link";
-import { SkeletonFeedAppPrimary } from "./skeletion-inspira-feed";
-import { ErrorState } from "./error-state";
+import { ErrorState } from "../global/error-state";
 import { Download } from "lucide-react";
+import { SkeletonInspiraFeed } from "../skeleton/skeleton-inspira-feed";
 
 export function InspiraFeed() {
   const [designs, setDesigns] = useState<Design[] | null>(null);
@@ -60,7 +60,7 @@ export function InspiraFeed() {
       ) : (
         <div className="columns-1 sm:columns-2 lg:columns-3 gap-5 space-y-5">
           {isLoading ? (
-            <SkeletonFeedAppPrimary />
+            <SkeletonInspiraFeed />
           ) : (
             designs.map((design) => (
               <Card
