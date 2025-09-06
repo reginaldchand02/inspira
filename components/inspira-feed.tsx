@@ -16,7 +16,7 @@ import { Design } from "@/types/design.types";
 import { getDesigns } from "@/utils/supabase/get-designs";
 import { Button } from "./ui/button";
 import Link from "next/link";
-import { SkeletonFeedAppPrimary } from "./skeletion-feed-app-primary";
+import { SkeletonFeedAppPrimary } from "./skeletion-inspira-feed";
 import { ErrorState } from "./error-state";
 import { Download } from "lucide-react";
 
