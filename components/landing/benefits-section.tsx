@@ -15,7 +15,10 @@ export function BenefitsSection() {
       <SectionChild>
         <TypographyH2>Benefits</TypographyH2>
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-2 text-left">
+        <div
+          id="benefits-section"
+          className="grid gap-6 sm:grid-cols-2 lg:grid-cols-2 text-left"
+        >
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">

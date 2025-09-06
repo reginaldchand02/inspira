@@ -13,7 +13,10 @@ export function MissionVisionSection() {
       <SectionChild>
         <TypographyH2>Mission & Vision</TypographyH2>
 
-        <div className="grid gap-6 sm:grid-cols-2 text-left">
+        <div
+          id="mission-vision-section"
+          className="grid gap-6 sm:grid-cols-2 text-left"
+        >
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">

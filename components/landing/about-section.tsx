@@ -14,7 +14,7 @@ export function AboutSection() {
   return (
     <Section>
       <SectionChild>
-        <div className="space-y-4 max-w-3xl mx-auto">
+        <div id="about-section" className="space-y-4 max-w-3xl mx-auto">
           <TypographyH2>About Inspira</TypographyH2>
           <TypographyP>
             Inspira isn&apos;t just a feed, it&apos;s a daily ritual of design.

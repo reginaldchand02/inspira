@@ -16,7 +16,10 @@ import {
 export function FeaturesSection() {
   return (
     <Section>
-      <div className="mx-auto max-w-6xl space-y-10 text-center">
+      <div
+        id="features-section"
+        className="mx-auto max-w-6xl space-y-10 text-center"
+      >
         <TypographyH2>Features</TypographyH2>
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 text-left">

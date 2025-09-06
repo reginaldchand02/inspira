@@ -1,12 +1,13 @@
 "use client";
 
 import Link from "next/link";
-import { Github } from "lucide-react";
 import { LogoBrand } from "./logo-brand";
+import { DesktopNav } from "./desktop-nav";
+import { MobileNav } from "./mobile-nav";
 
 export function HeaderPrimary() {
   return (
-    <header className="max-w-7xl w-[90%] sm:w-[70%] md:w-1/2 mx-auto h-16 p-5 pl-2 sticky inset-0 top-5 mb-16 flex items-center justify-between backdrop-blur-md bg-background/40 rounded-full z-50">
+    <header className="max-w-7xl w-[90%] sm:w-[70%] mx-auto h-16 p-5 pl-2 sticky inset-0 top-5 mb-16 flex items-center justify-between backdrop-blur-md bg-background/40 rounded-full z-50">
       <Link href={"/"} className="flex items-center gap-2.5 group">
         <div className="w-12 h-12">
           <LogoBrand />
@@ -17,24 +18,8 @@ export function HeaderPrimary() {
         </span>
       </Link>
 
-      <nav className="flex items-center gap-5">
-        <Link
-          href={"/"}
-          className="font-light hover:text-inspira-spark-highlight transition-colors"
-        >
-          Home
-        </Link>
-
-        <Link
-          href={"https://github.com/reginaldchand02/inspira"}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="GitHub Repository"
-          className="font-light hover:text-inspira-spark-highlight transition-colors"
-        >
-          <Github />
-        </Link>
-      </nav>
+      <DesktopNav />
+      <MobileNav />
     </header>
   );
 }

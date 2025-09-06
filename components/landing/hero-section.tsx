@@ -9,7 +9,10 @@ import { Button } from "../ui/button";
 export function HeroSection() {
   return (
     <Section>
-      <div className="max-w-2xl mx-auto text-center space-y-4">
+      <div
+        id="hero-section"
+        className="max-w-2xl mx-auto text-center space-y-4"
+      >
         <TypographyH1>One Original Design Every Day</TypographyH1>
         <TypographyLead>
           Inspira is your daily drop of fresh, hand-crafted design inspiration
