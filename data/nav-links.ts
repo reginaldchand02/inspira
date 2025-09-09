@@ -42,6 +42,12 @@ export const navLinks: NavLink[] = [
 
   {
     id: uuidv4(),
+    label: "Developer",
+    scrollToId: "developer-section",
+  },
+
+  {
+    id: uuidv4(),
     label: "GitHub",
     href: "https://github.com/reginaldchand02/inspira",
     external: true,

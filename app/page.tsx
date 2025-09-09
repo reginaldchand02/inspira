@@ -8,6 +8,7 @@ import { Loader } from "@/components/global/loader";
 import { MissionVisionSection } from "@/components/landing/mission-vision-section";
 import { PreviewSection } from "@/components/landing/preview-section";
 import { Suspense, useEffect, useState } from "react";
+import { DeveloperSection } from "@/components/landing/developers-section";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -32,6 +33,7 @@ export default function Home() {
           <MissionVisionSection />
           <FeaturesSection />
           <BenefitsSection />
+          <DeveloperSection />
         </>
       )}
     </Suspense>
