@@ -17,8 +17,9 @@ import { getDesigns } from "@/utils/supabase/get-designs";
 import { Button } from "../ui/button";
 import Link from "next/link";
 import { ErrorState } from "../global/error-state";
-import { Download } from "lucide-react";
+import { Download, Share2 } from "lucide-react";
 import { SkeletonInspiraFeed } from "../skeleton/skeleton-inspira-feed";
+import { toast } from "sonner";
 
 export function InspiraFeed() {
   const [designs, setDesigns] = useState<Design[] | null>(null);
@@ -81,7 +82,7 @@ export function InspiraFeed() {
                   />
 
                   <div className="absolute top-2 right-2">
-                    <Button asChild variant="outline">
+                    <Button asChild variant="outline" size="icon">
                       <Link
                         href={`/api/download?file=${encodeURIComponent(
                           design.media_storage_bucket_url
@@ -91,7 +92,7 @@ export function InspiraFeed() {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <Download className="w-5 h-5 text-primary" />
+                        <Download className="text-primary" />
                       </Link>
                     </Button>
                   </div>
@@ -160,18 +161,51 @@ export function InspiraFeed() {
                     </span>
                   </div>
 
-                  <Button asChild size="sm" className="mt-2">
-                    <Link
-                      href={`/api/download?file=${encodeURIComponent(
-                        design.media_storage_bucket_url
-                      )}`}
-                      download
-                      target="_blank"
-                      rel="noopener noreferrer"
+                  <div className="flex items-center gap-2 w-full mt-2">
+                    <Button asChild size="sm">
+                      <Link
+                        href={`/api/download?file=${encodeURIComponent(
+                          design.media_storage_bucket_url
+                        )}`}
+                        download
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Download
+                      </Link>
+                    </Button>
+
+                    <Button
+                      size="sm"
+                      variant="outline"
+                      aria-label={`Share ${design.title}`}
+                      onClick={() => {
+                        if (navigator.share) {
+                          navigator
+                            .share({
+                              title: design.title,
+                              text: design.description ?? "",
+                              url: design.media_storage_bucket_url,
+                            })
+                            .catch((err) =>
+                              toast.error(`Error sharing: ${err.message}`)
+                            )
+                            .finally(() => {
+                              toast.success("Thanks for sharing!");
+                            });
+                        } else {
+                          navigator.clipboard.writeText(
+                            design.media_storage_bucket_url
+                          );
+                          toast.success("Design URL copied to clipboard");
+                        }
+                      }}
+                      className="flex items-center gap-2"
                     >
-                      Download
-                    </Link>
-                  </Button>
+                      <Share2 className="w-4 h-4 text-primary" />
+                      Share
+                    </Button>
+                  </div>
                 </CardFooter>
               </Card>
             ))
