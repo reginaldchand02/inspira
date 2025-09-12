@@ -40,30 +40,6 @@ The logo is minimal, transparent, and scalable, making it suitable for both bran
 
 ---
 
-## Versioning & Roadmap
-
-### v3 | Fully Featured Landing Page
-
-- Public-facing landing page with polished design
-- SEO and meta optimization for wider reach
-- Highlighted sections for features, philosophy, and brand identity
-- Better onboarding and context for new users
-
-### v4 | Advanced Filtering
-
-- Design filtering and categorization (by tags, style, or theme)
-- Smarter browsing experience for users
-- Share designs externally (socials, copy link)
-- Blog section with posts on process, inspiration, and updates
-
-### v5 | Iteration & Expansion
-
-- Continuous improvements and refinements based on feedback
-- Exploration of new features and integrations
-- Scaling Inspira while keeping the “daily drop” identity strong
-
----
-
 ## Tech Stack
 
 - **Frontend:**
