@@ -9,6 +9,7 @@ import { MissionVisionSection } from "@/components/landing/mission-vision-sectio
 import { PreviewSection } from "@/components/landing/preview-section";
 import { Suspense, useEffect, useState } from "react";
 import { DeveloperSection } from "@/components/landing/developers-section";
+import { ThankYouSection } from "@/components/landing/thank-you-section";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -34,6 +35,7 @@ export default function Home() {
           <FeaturesSection />
           <BenefitsSection />
           <DeveloperSection />
+          <ThankYouSection />
         </>
       )}
     </Suspense>
