@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { HeaderPrimary } from "@/components/global/header-primary";
 import { FooterPrimary } from "@/components/global/footer-primary";
 import { Toaster } from "@/components/ui/sonner";
+import NextTopLoader from "nextjs-toploader";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -79,6 +80,10 @@ export default function RootLayout({
           enableSystem={false}
           disableTransitionOnChange
         >
+          <NextTopLoader
+            color="var(--inspira-design-primary)"
+            showSpinner={false}
+          />
           <HeaderPrimary />
           {children}
           <Toaster />
