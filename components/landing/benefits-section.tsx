@@ -4,7 +4,7 @@ import { Section } from "../global/section";
 import { Card, CardHeader, CardTitle, CardContent } from "../ui/card";
 import { Button } from "../ui/button";
 import Link from "next/link";
-import { Download, Sparkles, Wand2, FileText } from "lucide-react";
+import { Download, Sparkles, Wand2, Smartphone } from "lucide-react";
 import { TypographyH2 } from "../typography/typography-h2";
 import { TypographySmall } from "../typography/typography-small";
 import { SectionChild } from "../global/section-child";
@@ -72,15 +72,16 @@ export function BenefitsSection() {
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <FileText className="w-5 h-5 text-primary" />
-                AI Blogs & Weekly Emails
+                <Smartphone className="w-5 h-5 text-primary" />
+                Mobile Platform Support
               </CardTitle>
             </CardHeader>
 
             <CardContent>
               <TypographySmall>
-                Inspira generates insightful AI blogs and fully automated weekly
-                emails, no human intervention. Stay inspired effortlessly.
+                Inspira is fully supported on mobile through React Native,
+                tested and optimized for Android. Seamless performance, right in
+                your pocket.
               </TypographySmall>
             </CardContent>
           </Card>
